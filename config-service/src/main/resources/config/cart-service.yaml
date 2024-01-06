@@ -1,0 +1,25 @@
+server:
+  port: 8183
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+logging:
+  level:
+    org:
+      springframework: ERROR
+
+spring:
+  application:
+    name: cart-management-service
+  datasource:
+    url: jdbc:postgresql://localhost:55000/ecommerce_cart
+    username: postgres
+    password: postgrespw
+    driverClassName: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
